@@ -43,7 +43,7 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: product-service-ingress
+  name: {{APPLICATION_NAME}}-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
