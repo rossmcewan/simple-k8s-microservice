@@ -1,17 +1,26 @@
 const express = require("express");
 
 const app = express();
-const port = process.env.CLUSTER_SAMPLE_APP_PORT || 3000;
+const port = process.env.APP_PORT || 8080;
 
 var server = app.listen(port, () => {
   console.info("App started...");
 });
 
 // Now add a default GET handler
-app.get("/", (req, res, next) => {
-  console.debug("Processing a GET request on /");
+app.get("/items", (req, res, next) => {
+  
   res.send(
-    '<html><body><div style="text-align: center;"><h2>HELLO WORLD!</h2></div></body></html>'
+    JSON.stringify({
+        items: [
+            {
+                name: 'item1'
+            },
+            {
+                name: 'item2'
+            }
+        ]
+    })
   );
 });
 module.exports = server;
