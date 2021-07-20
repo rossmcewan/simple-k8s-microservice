@@ -9,7 +9,7 @@ var server = app.listen(port, () => {
 
 // Now add a default GET handler
 app.get("/items", (req, res, next) => {
-  
+  console.log('req', req);
   res.send(
     JSON.stringify({
         items: [
