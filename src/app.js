@@ -9,17 +9,20 @@ var server = app.listen(port, () => {
 
 // Now add a default GET handler
 app.get("/items", (req, res, next) => {
-  console.log('req', req);
+  console.log("req", req);
   res.send(
     JSON.stringify({
-        items: [
-            {
-                name: 'item1'
-            },
-            {
-                name: 'item2'
-            }
-        ]
+      items: [
+        {
+          name: "item1",
+        },
+        {
+          name: "item2",
+        },
+        {
+          name: "item3",
+        },
+      ],
     })
   );
 });
