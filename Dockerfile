@@ -1,5 +1,5 @@
 ### Our base image
-FROM amazonlinux
+FROM public.ecr.aws/amazonlinux/amazonlinux:latest
 
 ### Update our image
 RUN yum update -y
