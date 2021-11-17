@@ -19,6 +19,9 @@ app.get("/items", (req, res, next) => {
         {
           name: "item2",
         },
+        {
+          name: "item3",
+        },
       ],
     })
   );
